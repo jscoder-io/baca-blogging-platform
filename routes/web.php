@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomepageController::class, 'index'])->name('homepage');
+
+Route::name('blog.')->group(function () {
+    Route::get('/blog', [PostController::class, 'list'])->name('list');
+    Route::get('/blog/{slug}', [PostController::class, 'view'])->name('view');
 });
 
 Route::get('/dashboard', function () {
