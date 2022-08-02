@@ -14,6 +14,10 @@ Change directory.
 ``` bash
 cd baca-blogging-platform
 ```
+Install packages via composer.
+``` bash
+composer install
+```
 Copy `.env.example` to `.env`, then fill in your database environment.
 ``` bash
 cp .env.example .env
