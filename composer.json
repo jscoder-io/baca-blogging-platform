@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "firman/baca-blogging-platform",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "A blogging platform made with Laravel.",
+    "keywords": ["framework", "laravel", "baca", "blog"],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
