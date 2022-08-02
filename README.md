@@ -6,27 +6,15 @@
 
 ## How to Install
 
-Clone this repo.
+Create a project in directory `project-name`.
 ``` bash
-git clone git@github.com:jscoder-io/baca-blogging-platform.git
+composer create-project firman/baca-blogging-platform project-name
 ```
-Change directory.
+Change directory to `project-name`.
 ``` bash
-cd baca-blogging-platform
+cd project-name
 ```
-Install packages via composer.
-``` bash
-composer install
-```
-Copy `.env.example` to `.env`, then fill in your database environment.
-``` bash
-cp .env.example .env
-```
-Set the application key.
-``` bash
-php artisan key:generate
-```
-Run database migration.
+Fill in your database environment in file `.env`. Run database migration.
 ``` bash
 php artisan migrate
 ```
