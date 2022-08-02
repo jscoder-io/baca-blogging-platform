@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function list(Request $request)
     {
-        $posts = (new Post)->latest()->paginate(5);
+        $posts = (new Post)->latest()->paginate(setting('blog.post.per_page'));
 
         return view('post.list')->with('posts', $posts);
     }

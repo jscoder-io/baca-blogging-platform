@@ -14,6 +14,6 @@ class HeaderLogo extends Component
     public function render()
     {
         return view('components.header.logo')
-            ->with('name', 'My Blog');
+            ->with('name', setting('blog.name'));
     }
 }

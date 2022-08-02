@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +23,10 @@ Route::name('blog.')->group(function () {
     Route::get('/blog', [PostController::class, 'list'])->name('list');
     Route::get('/blog/{slug}', [PostController::class, 'view'])->name('view');
 });
+
+Route::get('/tags', [TagController::class, 'index'])->name('tags');
+
+Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -12,6 +12,19 @@ class Post extends Model
 {
     use HasFactory, HasSlug, SoftDeletes;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
+    protected $fillable = [
+        'title',
+        'intro',
+        'content',
+        'meta_keywords',
+        'meta_description'
+    ];
+
     public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()

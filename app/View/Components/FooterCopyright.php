@@ -14,6 +14,6 @@ class FooterCopyright extends Component
     public function render()
     {
         return view('components.footer.copyright')
-            ->with('copyright', 'Copyright © 2022 Firman.');
+            ->with('copyright', setting('blog.copyright'));
     }
 }

@@ -15,6 +15,6 @@ class LatestPosts extends Component
     public function render()
     {
         return view('components.posts.list')
-            ->with('posts', Post::getLatest());
+            ->with('posts', Post::getLatest(setting('blog.latest.per_page')));
     }
 }
