@@ -26,6 +26,8 @@ Route::name('blog.')->group(function () {
 
 Route::get('/tags', [TagController::class, 'index'])->name('tags');
 
+Route::get('/tags/{slug}', [TagController::class, 'view'])->name('tags.view');
+
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/dashboard', function () {

@@ -23,8 +23,19 @@
                         <div class="max-w-none pt-10 pb-8 text-gray-500 leading-7">{!! $post->content !!}</div>
                     </div>
                     <footer>
-                        @if ($prev || $next)
+                        @if ($tags || $prev || $next)
                         <div class="flex justify-between py-4 xl:block xl:space-y-8 xl:py-11">
+                            @if ($tags)
+                            <div>
+                                <h2 class="text-xs uppercase tracking-wide text-gray-500">Tags</h2>
+                                <div class="text-teal-500 hover:text-teal-600">
+                                    @foreach ($tags as $tag)
+                                    <a href="{{ route('tags.view', ['slug' => $tag->slug]) }}" class="mr-3">{{ $tag->name }}</a>
+                                    @endforeach
+                                </div>
+                            </div>
+                            @endif
+
                             @if ($prev)
                             <div>
                                 <h2 class="text-xs uppercase tracking-wide text-gray-500">Previous Article</h2>

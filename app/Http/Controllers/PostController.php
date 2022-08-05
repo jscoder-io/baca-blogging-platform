@@ -24,6 +24,7 @@ class PostController extends Controller
 
         return view('post.view')
             ->with('post', $post)
+            ->with('tags', $post->tags)
             ->with('prev', $post->getPrev())
             ->with('next', $post->getNext());
     }
