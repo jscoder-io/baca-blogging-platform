@@ -12,5 +12,5 @@
         <a class="text-teal-600 hover:text-teal-700" href="{{ route('blog.list') }}">All Posts →</a>
     </div>
 
-    <x-newsletter-form />
+    @livewire('newsletter-signup-form')
 </x-main-layout>
