@@ -12,6 +12,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        @stack('include-css')
+        @stack('include-js-head')
     </head>
     <body class="bg-white text-black antialiased">
         <div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
@@ -30,5 +33,6 @@
                 </footer>
             </div>
         </div>
+        @stack('include-js-body')
     </body>
 </html>
