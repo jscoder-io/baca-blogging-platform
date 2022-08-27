@@ -6,6 +6,9 @@
         <div class="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
             @if ($name)
             <div class="flex flex-col items-center pt-8">
+                @if ($avatar)
+                <img class="w-36 h-auto mb-2 rounded-full" src="{{ url('/storage/'.$avatar) }}" />
+                @endif
                 <h3 class="pb-2 text-2xl font-bold leading-8 tracking-tight">{{ $name }}</h3>
                 @if ($job_title)
                 <div class="text-gray-500">{{ $job_title }}</div>

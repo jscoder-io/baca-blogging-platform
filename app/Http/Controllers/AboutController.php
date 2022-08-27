@@ -16,6 +16,7 @@ class AboutController extends Controller
         return view('about')
             ->with('name', setting('blog.author.name'))
             ->with('job_title', setting('blog.author.job_title'))
-            ->with('bio', setting('blog.author.bio'));
+            ->with('bio', setting('blog.author.bio'))
+            ->with('avatar', setting('blog.author.avatar'));
     }
 }
