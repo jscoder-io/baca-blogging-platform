@@ -1,8 +1,8 @@
 <x-main-layout>
     <div class="divide-y divide-gray-200">
         <div class="space-y-2 pt-6 pb-8 md:space-y-5">
-            <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl">All Posts</h1>
-            <p class="text-lg leading-7 text-gray-500">All blog posts on various topics</p>
+            <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl">{{ __('All Posts') }}</h1>
+            <p class="text-lg leading-7 text-gray-500">{{ __('All blog posts on various topics') }}</p>
         </div>
 
         <x-posts.list :posts="$posts" />

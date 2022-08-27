@@ -35,16 +35,38 @@ class Post extends Model
             ->doNotGenerateSlugsOnUpdate();
     }
 
+    /**
+     * Get a previous post
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
     public function getPrev()
     {
-        return (new static)->find($this->id - 1);
+        return (new static)->where('id', '<', $this->id)
+            ->orderBy('id', 'desc')
+            ->limit(1)
+            ->first();
     }
 
+    /**
+     * Get a next post
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
     public function getNext()
     {
-        return (new static)->find($this->id + 1);
+        return (new static)->where('id', '>', $this->id)
+            ->orderBy('id', 'asc')
+            ->limit(1)
+            ->first();
     }
 
+    /**
+     * Get latest posts with limit
+     *
+     * @param  int  $limit
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
     public static function getLatest($limit = 5)
     {
         return (new static)->latest()->limit($limit)->get();

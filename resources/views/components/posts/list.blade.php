@@ -5,7 +5,7 @@
         <article>
             <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                 <dl>
-                    <dt class="sr-only">Published on</dt>
+                    <dt class="sr-only">{{ __('Published on') }}</dt>
                     <dd class="text-base font-medium leading-6 text-gray-500">
                         <time>
                             {{ \Illuminate\Support\Facades\Date::createFromTimeString($post->created_at)->format('F j, Y'); }}
@@ -22,7 +22,7 @@
                         <div class="max-w-none text-gray-500">{{ $post->intro }}</div>
                     </div>
                     <div class="text-base font-medium leading-6">
-                        <a class="text-teal-600 hover:text-teal-700" href="{{ route('blog.view', ['slug' => $post->slug]) }}">Read more →</a>
+                        <a class="text-teal-600 hover:text-teal-700" href="{{ route('blog.view', ['slug' => $post->slug]) }}">{{ __('Read more') }} →</a>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
-    public function index(Request $request)
+    /**
+     * Home page with latest posts
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index()
     {
         return view('homepage');
     }

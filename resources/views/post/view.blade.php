@@ -6,7 +6,7 @@
                     <div class="space-y-1 text-center">
                         <dl class="space-y-10">
                             <div>
-                                <dt class="sr-only">Published on</dt>
+                                <dt class="sr-only">{{ __('Published on') }}</dt>
                                 <dd class="text-base font-medium leading-6 text-gray-500">
                                     <time>{{ \Illuminate\Support\Facades\Date::createFromTimeString($post->created_at)->format('l, F j, Y'); }}</time>
                                 </dd>
@@ -27,7 +27,7 @@
                         <div class="flex justify-between py-4 xl:block xl:space-y-8 xl:py-11">
                             @if ($tags)
                             <div>
-                                <h2 class="text-xs uppercase tracking-wide text-gray-500">Tags</h2>
+                                <h2 class="text-xs uppercase tracking-wide text-gray-500">{{ __('Tags') }}</h2>
                                 <div class="text-teal-500 hover:text-teal-600">
                                     @foreach ($tags as $tag)
                                     <a href="{{ route('tags.view', ['slug' => $tag->slug]) }}" class="mr-3">{{ $tag->name }}</a>
@@ -38,7 +38,7 @@
 
                             @if ($prev)
                             <div>
-                                <h2 class="text-xs uppercase tracking-wide text-gray-500">Previous Article</h2>
+                                <h2 class="text-xs uppercase tracking-wide text-gray-500">{{ __('Previous Article') }}</h2>
                                 <div class="text-teal-500 hover:text-teal-600">
                                     <a href="{{ route('blog.view', ['slug' => $prev->slug]) }}">{{ $prev->title }}</a>
                                 </div>
@@ -47,7 +47,7 @@
 
                             @if ($next)
                             <div>
-                                <h2 class="text-xs uppercase tracking-wide text-gray-500">Next Article</h2>
+                                <h2 class="text-xs uppercase tracking-wide text-gray-500">{{ __('Next Article') }}</h2>
                                 <div class="text-teal-500 hover:text-teal-600">
                                     <a href="{{ route('blog.view', ['slug' => $next->slug]) }}">{{ $next->title }}</a>
                                 </div>
@@ -57,7 +57,7 @@
                         @endif
 
                         <div class="pt-0 xl:pt-0">
-                            <a class="text-teal-500 hover:text-teal-600" href="{{ route('blog.list') }}">← Back to the blog</a>
+                            <a class="text-teal-500 hover:text-teal-600" href="{{ route('blog.list') }}">← {{ __('Back to the blog') }}</a>
                         </div>
                     </footer>
                 </div>
