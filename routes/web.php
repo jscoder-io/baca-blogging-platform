@@ -5,6 +5,7 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +31,22 @@ Route::get('/tags/{slug}', [TagController::class, 'view'])->name('tags.view');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    Route::get('/post', function () {
+        return Inertia::render('Post');
+    })->name('post');
+
+    Route::get('/setting', function () {
+        return Inertia::render('Setting');
+    })->name('setting');
+});
+
+Route::get('/backtologin', function () {
+    return Inertia::render('BackToLogin');
+})->name('backtologin');
 
 require __DIR__.'/auth.php';

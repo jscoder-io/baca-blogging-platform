@@ -22,8 +22,8 @@ Artisan::command('inspire', function () {
 
 Artisan::command('baca:user', function () {
     tap((new User)->forceFill([
-        'name'     => $this->ask('Name'),
-        'email'    => $this->ask('Email Address'),
+        'name' => $this->ask('Name'),
+        'email' => $this->ask('Email Address'),
         'password' => Hash::make($this->secret('Password')),
     ]))->save();
 
