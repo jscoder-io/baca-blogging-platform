@@ -34,6 +34,14 @@ Run application.
 ``` bash
 php artisan serve
 ```
+## Create an Administrator
+
+Run command below in your project directory
+``` bash
+php artisan baca:user
+```
+
+Go to page `/login` to log in as an administrator.
 
 ## Credits
 
