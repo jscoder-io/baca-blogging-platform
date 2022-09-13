@@ -24,7 +24,9 @@ class NewsletterSignupForm extends Component
     {
         $updates = $response->request->updates;
         foreach ($updates as $update) {
-            if ($update['type'] !== 'callMethod') continue;
+            if ($update['type'] !== 'callMethod') {
+                continue;
+            }
             $this->subscriber = new Subscriber; // Reset after calling method
         }
     }
@@ -41,7 +43,10 @@ class NewsletterSignupForm extends Component
 
     public function hasError()
     {
-        if ($this->error) return true;
+        if ($this->error) {
+            return true;
+        }
+
         return false;
     }
 
