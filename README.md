@@ -2,6 +2,9 @@
 
 ## Introduction
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/firman/baca-blogging-platform.svg)](https://packagist.org/packages/firman/baca-blogging-platform)
+[![Total Downloads](https://img.shields.io/packagist/dt/firman/baca-blogging-platform.svg)](https://packagist.org/packages/firman/baca-blogging-platform)
+
 **Baca** is a blogging platform made with Laravel. Baca is a word in Bahasa Indonesia. It means _read_ in English. The app is still in early stage development. More to come.
 
 ## How to Install
