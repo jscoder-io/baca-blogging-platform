@@ -23,7 +23,7 @@ class PostController extends Controller
      * View a post by slug
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param string $slug
+     * @param  string  $slug
      * @return \Illuminate\View\View
      */
     public function view(Request $request, $slug)
