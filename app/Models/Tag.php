@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Post;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Spatie\Tags\Tag as SpatieTag;
 

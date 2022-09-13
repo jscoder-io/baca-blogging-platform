@@ -23,10 +23,10 @@ class Post extends Model
         'intro',
         'content',
         'meta_keywords',
-        'meta_description'
+        'meta_description',
     ];
 
-    public function getSlugOptions() : SlugOptions
+    public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
             ->generateSlugsFrom('title')

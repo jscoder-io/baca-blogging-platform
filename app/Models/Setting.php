@@ -20,6 +20,7 @@ class Setting extends Model
     public static function getByPath($path)
     {
         $setting = (new static)->where('path', $path)->get()->first();
+
         return $setting ? $setting->value : null;
     }
 }
