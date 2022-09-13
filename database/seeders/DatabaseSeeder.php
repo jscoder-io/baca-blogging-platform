@@ -31,9 +31,9 @@ class DatabaseSeeder extends Seeder
     protected function parse($filename)
     {
         $results = [];
-        if (($handle = fopen(database_path('samples/'.$filename), "r")) !== false) {
+        if (($handle = fopen(database_path('samples/'.$filename), 'r')) !== false) {
             $header = false;
-            while (($data = fgetcsv($handle, 1000, ",")) !== false) {
+            while (($data = fgetcsv($handle, 1000, ',')) !== false) {
                 if ($header === false) {
                     $header = $data;
                 } else {
@@ -42,6 +42,7 @@ class DatabaseSeeder extends Seeder
             }
             fclose($handle);
         }
+
         return $results;
     }
 }
