@@ -1,4 +1,7 @@
-<p align="center"><img src="https://raw.githubusercontent.com/jscoder-io/baca-blogging-platform/master/storage/screenshot.png" width="700"></p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/jscoder-io/baca-blogging-platform/master/storage/screenshot.png" width="350">
+<img src="https://raw.githubusercontent.com/jscoder-io/baca-blogging-platform/master/storage/screenshot_admin.png" width="350">
+</p>
 
 ## Introduction
 
@@ -6,6 +9,10 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/firman/baca-blogging-platform.svg)](https://packagist.org/packages/firman/baca-blogging-platform)
 
 **Baca** is a blogging platform made with Laravel. Baca is a word in Bahasa Indonesia. It means _read_ in English. The app is still in early stage development. More to come.
+
+## Tech Stack
+
+Laravel, MySQL, Redis, Tailwind CSS, Daisy UI and Vue 3.
 
 ## How to Install
 
