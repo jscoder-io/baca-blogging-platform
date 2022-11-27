@@ -16,7 +16,7 @@
 
         <style>body { font-family: 'Montserrat'; font-style: normal; font-weight: 400; }</style>
     </head>
-    <body>
+    <body class="bg-gray-100">
         @inertia('admin')
     </body>
 </html>

@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -37,11 +38,23 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 
     Route::get('/post', function () {
-        return Inertia::render('Post');
+        return Inertia::render('Post', ['posts' => Post::latest()->get()]);
     })->name('post');
 
+    Route::get('/post/new', function () {
+        return Inertia::render('Post/New');
+    })->name('post.new');
+
+    Route::get('/post/edit/{id}', function ($id) {
+        return Inertia::render('Post/Edit', ['post' => Post::find($id)]);
+    })->name('post.edit');
+
     Route::get('/setting', function () {
-        return Inertia::render('Setting');
+        return Inertia::render('Setting', ['setting' => [
+            'name' => setting('blog.author.name'),
+            'title' => setting('blog.author.job_title'),
+            'bio' => setting('blog.author.bio'),
+        ]]);
     })->name('setting');
 });
 
